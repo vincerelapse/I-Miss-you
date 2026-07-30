@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>I Miss You</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fullscreen Canvas for Ambient Particles & Fireworks -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Mobile App Container (Capped at 430px) -->
+  <div id="app-wrapper">
+
+    <!-- START OVERLAY -->
+    <div id="start-overlay" class="overlay-screen">
+      <div class="glass-card start-card">
+        <h1 class="start-title">OH ITO NA</h1>
+        <p class="start-subtitle">MATALO KA SANA SA CODM</p>
+        <button id="start-btn" class="start-button">
+          <span>START</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="content-container">
+      
+      <!-- Top Section: Pixel Heart & Title -->
+      <section class="header-section">
+        <canvas id="heart-canvas" width="160" height="140"></canvas>
+        <h1 class="main-title">Miss Me Ba?</h1>
+      </section>
+
+      <!-- Video Grid Section -->
+      <section class="video-section">
+        
+        <!-- Top Row: Two Square Videos -->
+        <div class="video-grid-2">
+          
+          <!-- Video 1 (Left) -->
+          <div class="glass-card video-card square-card">
+            <video 
+              id="video1" 
+              class="video-element" 
+              src="assets/video1.mp4" 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              disablepictureinpicture 
+              controlslist="nodownload nofullscreen noremoteplayback">
+            </video>
+          </div>
+
+          <!-- Video 2 (Right) -->
+          <div class="glass-card video-card square-card">
+            <video 
+              id="video2" 
+              class="video-element" 
+              src="assets/video2.mp4" 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              disablepictureinpicture 
+              controlslist="nodownload nofullscreen noremoteplayback">
+            </video>
+          </div>
+
+        </div>
+
+        <!-- Bottom Row: Main Landscape Video -->
+        <div class="glass-card video-card landscape-card">
+          <video 
+            id="video3" 
+            class="video-element" 
+            src="assets/video3.mp4" 
+            autoplay 
+            loop 
+            playsinline 
+            disablepictureinpicture 
+            controlslist="nodownload nofullscreen noremoteplayback">
+          </video>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" src="assets/music.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
